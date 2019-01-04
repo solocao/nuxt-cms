@@ -1,0 +1,21 @@
+//导入基本样式
+@import "base/base";
+
+@import "var";
+@import "common";
+@import "layout";
+
+//quill
+@import "quill";
+
+//pages
+@import "pages/admin/index";
+@import "pages/index";
+@import "pages/user";
+
+//components
+@import "components/admin/a-aside";
+@import "components/admin/a-header";
+@import "components/index";
+@import "components/c-top";
+@import "components/c-bottom";

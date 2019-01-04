@@ -1,0 +1,10 @@
+.c-bottom {
+  background: $menu-background;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  .copyright {
+    font-size: 12px;
+    color: $paragraph;
+  }
+}

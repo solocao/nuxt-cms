@@ -1,0 +1,25 @@
+//Quill
+.ql-snow{
+  .ql-picker{
+    height: auto!important;
+    .ql-expanded {
+      .ql-picker-label{
+        outline: none;
+        border-color: #000!important;
+        color: #000!important;
+        .ql-stroke{
+          stroke: #000!important;
+        }
+      }
+    }
+  }
+}
+.ql-toolbar{
+  border: none!important;
+  background: wheat;
+}
+.ql-container{
+  border: none!important;
+  background: white;
+  min-height: 300px;
+}

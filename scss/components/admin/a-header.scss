@@ -1,0 +1,32 @@
+.a-header {
+  .menu-collapse {
+    cursor: pointer;
+    margin-right: 10px;
+    i {
+      font-size: 14px;
+      color: white;
+      &:hover{
+        color: $link-color;
+      }
+    }
+  }
+  .el-breadcrumb {
+    font-size: 12px;
+    line-height: 18px;
+    span{
+      color: #FFFFFF;
+    }
+  }
+  .welcome {
+    color: white;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    .el-dropdown{
+      cursor: pointer;
+      margin-left: 10px;
+      color: white;
+      font-size: 12px;
+    }
+  }
+}

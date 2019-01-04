@@ -1,0 +1,23 @@
+/*hover*/
+.hover {
+  cursor: pointer;
+  &:hover{
+    color: #4283EE;
+  }
+  &-scale{
+    transform: scale(1);
+    transition: transform 0.5s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  &-opacity{
+    opacity: 1;
+    transition: transform 0.5s;
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+}

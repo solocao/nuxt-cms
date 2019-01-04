@@ -1,0 +1,24 @@
+{
+  "admin":{
+    "home":"首页",
+    "dashboard":"仪表盘",
+    "userManagement":"用户管理",
+    "articleManagement":"文章管理",
+    "logoManagement":"成功案例",
+    "contactManagement":"留言管理",
+    "articleEditor":"文章编辑",
+    "logout":"退出系统",
+    "page":{
+      "check":"查看",
+      "edit":"编辑",
+      "delete":"删除",
+      "article":{
+        "publish":"发布文章",
+        "typeFilter":"按类型过滤显示"
+      },
+      "users":{
+        "create":"创建用户"
+      }
+    }
+  }
+}

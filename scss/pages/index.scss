@@ -1,0 +1,172 @@
+//首页
+.home-page {
+  //height: 100%;
+  .personal-wrapper{
+    padding-top: 20px;
+    .personal{
+      background: #13132f;
+      img{
+        @media (max-width: 40em){
+          max-height: 180px;
+        }
+      }
+      .info{
+        color: #607D8B;
+        padding: 20px;
+        line-height: 22px;
+        font-weight: bolder;
+        font-size: 12px;
+        text-align: center;
+      }
+      .button{
+        margin-top: 20px;
+        color: white;
+        padding: 10px 50px;
+        background: #188573;
+        cursor: pointer;
+        text-align: center;
+        &:hover{
+          background: #00bb7e;
+        }
+      }
+    }
+    .experience{
+      .title{
+        font-size: 14px;
+        font-weight: bolder;
+        margin: 10px 0;
+      }
+      .work{
+        font-size: 12px;
+        color: #607D8B;
+        line-height: 20px;
+        text-align: justify;
+        padding: 20px;
+        span{
+          color: #188573;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+  .project-wrapper{
+    padding-top: 20px;
+    .cell{
+      text-align: center;
+      background: #0f816f;
+      margin-bottom: 20px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      &:hover{
+        background: #00bb7e;
+      }
+    }
+  }
+  .search-wrapper{
+    position: relative;
+    top: 9px;
+    min-width: 330px;
+    float: right;
+    @media (max-width: 40em){
+      top: -13px!important;
+      width: 100%;
+    }
+  }
+  .tags-wrapper{
+    padding: 20px 0;
+    .el-radio__input{
+      display: none;
+    }
+    label{
+      display: inline-block;
+      font-size: 14px;
+      background: #2e4960;
+      border: 1px solid #2e4960;
+      color: white;
+      margin-left: 5px;
+      margin-bottom: 5px;
+      padding: 10px;
+      cursor: pointer;
+      &:hover{
+        background: #00bb7e;
+        border: 1px solid #00bb7e;
+      }
+    }
+    .el-radio__label{
+      padding: 0;
+    }
+    .is-checked{
+      color: white;
+      background: #00bb7e;
+      border: 1px solid #00bb7e;
+      + .el-radio__label{
+        color: white;
+      }
+    }
+  }
+  .masonry{
+    padding: 20px 0;
+    .item{
+      border: 1px solid #ffffff;
+      .item-content{
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 0 15px #a5a5a599;
+
+        position: relative;
+        bottom: 0;
+        transition: bottom 500ms;
+        &:hover{
+          bottom: 5px;
+          .title{
+            color: $link-color;
+          }
+        }
+      }
+      .thumb{
+        min-height: 100px;
+        background: #0f816f;
+        font-size: 40px;
+        color: #dcdcdc;
+        font-weight: bolder;
+        text-shadow: #4a4a4a 0 0 2px;
+        img{
+          height: 100%;
+        }
+      }
+      .tags{
+        margin-top: 10px;
+        li{
+          display: inline-block;
+          font-size: 12px;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          padding: 2px 4px;
+          background: #2e4960;
+          color: white;
+        }
+      }
+      .title{
+        margin: 5px 0;
+      }
+      .desc{
+        font-size: 12px;
+        color: #949494;
+        text-align: justify;
+      }
+    }
+    @media screen and (min-width: 40em) {
+      column-count: 4;
+    }
+  }
+  .el-dialog{
+    @media (max-width: 40em){
+      width: 90%;
+    }
+    .el-dialog__body{
+      padding: 0 20px;
+    }
+  }
+}

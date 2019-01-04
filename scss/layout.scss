@@ -1,0 +1,43 @@
+#__nuxt,#__layout{
+  height: inherit;
+}
+.cnzz_icon{
+  visibility: hidden;
+  position: absolute;
+}
+//默认布局
+.default-layout{
+  height: inherit;
+}
+//登录布局
+.login-layout{
+  height: inherit;
+}
+//后台布局
+.admin-layout{
+  height: inherit;
+  .hide-for-small-only{
+    height: inherit;
+  }
+  .el-container{
+    height: inherit;
+    background: $main-admin-background;
+    .el-aside{
+      width: auto!important;
+      background: $main-color;
+      box-shadow: 2px 0 5px #000000;
+      z-index: 1;
+    }
+    .el-header{
+      height: auto!important;
+      padding: 10px 20px;
+      border-bottom: 1px solid black;
+    }
+    .el-main{
+      padding: 0;
+      margin: 20px;
+      height: inherit;
+    }
+  }
+}
+

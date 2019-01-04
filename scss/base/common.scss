@@ -1,0 +1,359 @@
+/*visibility*/
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+/*user select*/
+.usn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* mask */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 999;
+  &-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &-cover-all {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+/*font*/
+.font {
+  &-indent {
+    text-indent: 2em;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+  &-normal {
+    font-weight: normal;
+  }
+  &-fz12 {
+    font-size: 12px;
+  }
+  &-fz14 {
+    font-size: 14px;
+  }
+  &-fz16 {
+    font-size: 16px;
+  }
+  &-fz18 {
+    font-size: 18px;
+  }
+  &-fz20 {
+    font-size: 20px;
+  }
+  &-fz24 {
+    font-size: 24px;
+  }
+  &-fz26 {
+    font-size: 26px;
+  }
+  &-fz28 {
+    font-size: 28px;
+  }
+  &-fz32 {
+    font-size: 32px;
+  }
+}
+
+/*text*/
+.text {
+  &-tal {
+    text-align: left;
+  }
+  &-tar {
+    text-align: right;
+  }
+  &-tac {
+    text-align: center;
+  }
+  &-taj {
+    text-align: justify;
+  }
+  &-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &-clamp {
+      height: inherit; /*必须设置高度才生效*/
+      overflow: hidden;
+      position: relative;
+      &:after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #FFFFFF 50%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        content: "...";
+        padding: 0 5px 1px 30px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+/* menu */
+.menu {
+  &-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &-text {
+    vertical-align: middle;
+  }
+}
+
+/* fixed */
+.fixed {
+  &-tl {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &-tr {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  &-tc {
+    position: fixed;
+    top: 0;
+    left: 50%;
+  }
+  &-bl {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  &-br {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  &-bc {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+  }
+  &-cc {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+  }
+}
+
+/* float */
+.float {
+  &-l {
+    float: left;
+  }
+  &-r {
+    float: right;
+  }
+  &-c {
+    zoom: 1;
+    clear: both;
+    &:after {
+      content: ".";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+/*flex*/
+.flex {
+  &-b-half {
+    flex-basis: 50%;
+  }
+  &-b-quarter {
+    flex-basis: 25%;
+  }
+  &-b-fifth {
+    flex-basis: 20%;
+  }
+  &-auto {
+    flex-grow: 1;
+  }
+  &-shrink {
+    flex-shrink: 1;
+  }
+  &-row {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+  }
+  &-row-sa {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+  }
+  &-row-sb {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+  }
+  &-row-c {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+  &-row-end {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+  }
+  &-col-sa {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+    height: inherit;
+  }
+  &-col-sb {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    height: inherit;
+  }
+  &-col-c {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    justify-content: center;
+    -ms-flex-pack: center;
+    height: inherit;
+  }
+  &-col-end {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+    height: inherit;
+  }
+  &-center-sa {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+    height: inherit;
+  }
+  &-center-sb {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    height: inherit;
+  }
+  &-center-c {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    height: inherit;
+  }
+}
+
+/*grid*/
+.grid {
+  &-row {
+    display: grid;
+  }
+  &-inline {
+    display: inline-grid;
+  }
+}
+
+/*center*/
+.margin {
+  &-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+}
+
+.transform {
+  &-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.vertical {
+  //line-height
+  text-align: center;
+  &-center {
+    line-height: initial;
+    display: inline-block;
+  }
+  &-inner-center {
+    line-height: initial;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

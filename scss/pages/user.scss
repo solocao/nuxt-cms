@@ -1,0 +1,46 @@
+.user-page{
+  .user-container{
+    background: white;
+    box-shadow: 0 0 10px #00000040;
+    border-radius: 10px;
+    padding: 30px 100px;
+    text-align: center;
+    .avatar{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #e8e8e8;
+      border-radius: 100%;
+      margin: auto;
+      .avatar-uploader{
+        height: 100%;
+        .el-upload{
+          height: 100%;
+          img{
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+
+    .info{
+      margin: 10px 0;
+      color: #8a8a8a;
+      text-align: left;
+      >div{
+        line-height: 25px;
+      }
+    }
+    .save{
+      background: #2e4960;
+    }
+    a{
+      background: #0f816f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+
+}

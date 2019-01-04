@@ -1,0 +1,33 @@
+.a-aside {
+  .el-menu {
+    background: $main-color;
+    border-right: none;
+    .el-menu-item {
+      color: $menu-text;
+      border-bottom: 1px solid #292929;
+      &:first-child {
+        text-align: center;
+      }
+      &:hover {
+        color: $link-color;
+        background-color: $menu-focus;
+        i{
+          color: $link-color;
+        }
+      }
+      &:focus {
+        background-color: $menu-focus;
+      }
+    }
+    .button-container {
+      padding: 20px;
+      .el-button {
+        width: 100%;
+      }
+    }
+  }
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+  }
+}

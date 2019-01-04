@@ -1,0 +1,44 @@
+.geetest_holder.geetest_wind{
+  width: 100%!important;
+}
+.el-input-group__append{
+  cursor: pointer;
+}
+.el-message-box{
+  @media (max-width: 40em){
+    width: auto!important;
+  }
+}
+.load-more{
+  text-align: center;
+  color: #adadad;
+}
+.sec-title{
+  border-bottom: 1px solid #dedede;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  span{
+    border-left: 4px solid #0f816f;
+    padding-left: 5px;
+  }
+}
+/*masonry*/
+.masonry{
+  column-count: 1; //设置显示列数
+  column-gap: 0;
+  counter-reset: item-counter;
+  .item{
+    box-sizing: border-box;
+    break-inside: avoid;
+    counter-increment: item-counter;
+  }
+}
+
+//phone
+@media (max-width: 40em){
+  .grid-container{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

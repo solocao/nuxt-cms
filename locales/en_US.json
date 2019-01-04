@@ -1,0 +1,24 @@
+{
+  "admin":{
+    "home":"HOME",
+    "dashboard":"Dashboard",
+    "userManagement":"User Management",
+    "articleManagement":"Article Management",
+    "logoManagement":"Logo Management",
+    "contactManagement":"Contact Management",
+    "articleEditor":"Article editor",
+    "logout":"Sign Out",
+    "page":{
+      "check":"Check",
+      "edit":"Edit",
+      "delete":"Delete",
+      "article":{
+        "publish":"Publish Article",
+        "typeFilter":"Display By Type"
+      },
+      "users":{
+        "create":"Create User"
+      }
+    }
+  }
+}
