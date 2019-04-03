@@ -9,9 +9,9 @@ import Article from '../model/article'
 export default {
   post: async(ctx, next) => {
     let body = ctx.request.body
-    let {type,tags,title,content,user} = body
+    let {tags,user} = body
     try{
-      if(!type || !tags || !title || !content || !user) ctx.throw('缺少字段')
+      if(!tags || !user) ctx.throw('缺少字段')
 
       // 查询标签集合，没有就插入新标签
       // 查询出该文章所有标签的id
@@ -150,10 +150,11 @@ export default {
     let { tag } = ctx.params
     let page = pagination(ctx)
 
-    let conditions = { tags: {$all:[tag]} }
     try {
-      let count = await Article.countDocuments(conditions)
-      let records = await Article.find(conditions)
+      let record = await Tag.find({name: tag})
+      let conditions = { tags: {$all:[record[0]._id]} }
+      let count = await Article.countDocuments(Object.assign(conditions,page.query))
+      let records = await Article.find(Object.assign(conditions,page.query))
         .populate({
           path:'user',
           select: 'name'
@@ -170,5 +171,30 @@ export default {
     } catch (e) {
       handle.error(ctx,e)
     }
-  }
+  },
+  listByTagId: async(ctx, next) => {
+    let { tagId } = ctx.params
+    let page = pagination(ctx)
+
+    let conditions = { tags: {$all:[tagId]} }
+    try {
+      let count = await Article.countDocuments(Object.assign(conditions,page.query))
+      let records = await Article.find(Object.assign(conditions,page.query))
+        .populate({
+          path:'user',
+          select: 'name'
+        })
+        .populate({
+          path:'tags',
+          select: 'name'
+        })
+        .sort(page.sort)
+        .skip(page.skip)
+        .limit(page.limit)
+        .exec()
+      handle.data(ctx,records,count)
+    } catch (e) {
+      handle.error(ctx,e)
+    }
+  },
 }

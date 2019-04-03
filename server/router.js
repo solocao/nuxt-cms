@@ -36,13 +36,14 @@ router
   .post('/user/reset-password', checkToken, user.resetPassword)
   .get('/users', checkToken, user.list)
   //article
-  .post('/article', article.post)
+  .post('/article', checkToken, article.post)
+  .patch('/article/:id', checkToken, article.patch)
+  .delete('/article/:id', checkToken, article.del)
   .get('/article/:id', article.get)
-  .patch('/article/:id', article.patch)
-  .delete('/article/:id',checkAdmin, article.del)
   .get('/articles', article.list)
   .get('/articles/search/:keyword', article.listBySearch)
   .get('/articles/tag/:tag', article.listByTag)
+  .get('/articles/tagId/:tagId', article.listByTagId)
   //comment
   .post('/comment', comment.post)
   .get('/comments', comment.list)

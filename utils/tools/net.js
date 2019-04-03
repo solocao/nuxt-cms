@@ -179,6 +179,19 @@ let net = {
     }
     return '';
   },
+  getCookieFrom: function (cookie, name) {
+    var cookieName = encodeURIComponent(name) + "=",
+      cookieStart = cookie.indexOf(cookieName),
+      cookieValue = null
+    if(cookieStart > -1){
+      var cookieEnd = cookie.indexOf(";",cookieStart)
+      if(cookieEnd == -1){
+        cookieEnd = cookie.length
+      }
+      cookieValue = decodeURIComponent(cookie.substring(cookieStart + cookieName.length,cookieEnd))
+    }
+    return cookieValue
+  },
   /*删除cookie*/
   removeCookie: function (name) {
     this.setCookie(name, 1, -1);

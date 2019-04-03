@@ -19,7 +19,7 @@ mongoose.set('useFindAndModify',false) //use native findOneAndUpdate()
 const db = mongoose.connection
 db.on('error', console.error.bind(console, '连接错误信息:'))
 db.once('open', async () => {
-  console.log('链接数据库成功！')
+  console.log(`链接 ${config.mongodb.database} 数据库成功！`)
   // 初始化管理员信息
   let adminInfo = config.admin
   adminInfo.password = md5(adminInfo.password)

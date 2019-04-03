@@ -3,11 +3,23 @@ import {options} from '../extend'
 
 const Schema = mongoose.Schema
 const schema = new Schema({
+  name: {
+    type: String,
+    default: ''
+  },
   type: {
     type: String,
     default: ''
   },
+  subType: {
+    type: String,
+    default: ''
+  },
   title: {
+    type: String,
+    default: ''
+  },
+  subTitle: {
     type: String,
     default: ''
   },
@@ -16,6 +28,10 @@ const schema = new Schema({
     default: ''
   },
   thumb: {
+    type: String,
+    default: ''
+  },
+  summary: {
     type: String,
     default: ''
   },
@@ -29,7 +45,15 @@ const schema = new Schema({
   },
   status: {
     type: Number,
-    default: 0   //0:未发布 1:已发布
+    default: 0
+  },
+  visible: {
+    type: Boolean,
+    default: false
+  },
+  extend: {
+    type: Object,
+    default: {}
   },
   user: {
     type: Schema.Types.ObjectId,

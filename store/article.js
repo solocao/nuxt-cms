@@ -1,4 +1,3 @@
-import D from '../utils/tools/date'
 export const state = () => ({
   pageIndex: 1,
   table: []
@@ -35,5 +34,8 @@ export const actions = {
   },
   async GET_ARTICLES_BY_TAG({ commit, state, getters }, payload){
     return await this.$axios.$get(`/articles/tag/${payload.tag}${payload.query}`)
+  },
+  async GET_ARTICLES_BY_TAG_ID({ commit, state, getters }, payload){
+    return await this.$axios.$get(`/articles/tagId/${payload.tagId}${payload.query}`)
   }
 }

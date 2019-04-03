@@ -108,10 +108,10 @@
         let res
         if(storeTag) {
           let payload = {
-            tag: storeTag,
+            tagId: storeTag,
             query: `?pageIndex=${pageIndex}&pageSize=${this.pageSize}`
           }
-          res = await this.$store.dispatch('article/GET_ARTICLES_BY_TAG', payload)
+          res = await this.$store.dispatch('article/GET_ARTICLES_BY_TAG_ID', payload)
         }else {
           res = await this.$store.dispatch('article/GET_ARTICLES', `?pageIndex=${pageIndex}&pageSize=${this.pageSize}`)
         }
@@ -144,10 +144,10 @@
       },
       async getTagContent(storeTag){
         let payload = {
-          tag: storeTag,
+          tagId: storeTag,
           query: `?pageIndex=1&pageSize=${this.pageSize}`
         }
-        let res = await this.$store.dispatch('article/GET_ARTICLES_BY_TAG', payload)
+        let res = await this.$store.dispatch('article/GET_ARTICLES_BY_TAG_ID', payload)
         this.table = res.data
         await this.$store.commit('article/SET_TABLE',this.table)
       },
